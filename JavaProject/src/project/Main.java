@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         MoneyManager manager = new MoneyManager();
         Scanner scanner = new Scanner(System.in);
-        manager.readFromFile("Test");
+        manager.readFromFile("MoneyManager");
         int choice;
         do {
             System.out.println("\nMoney Manager Menu:");
