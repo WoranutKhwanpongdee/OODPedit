@@ -50,16 +50,19 @@ import java.util.ArrayList;
 				transaction.display();
 			}
 		}
+		
 		// Method to write transactions to a file
 		public void writeToFile(String filename) {
 			try {
-				BufferedWriter writeFile = new BufferedWriter(new FileWriter(filename,true));
+				BufferedWriter writeFile = new BufferedWriter(new FileWriter(filename, true)); // Append mode
 				for (Transaction e : transactions) {
 					writeFile.write(e.getType() + " " + e.getAmount() + "\n");
 				}
 				writeFile.close();
+				System.out.println("Transactions written to file: " + filename);
 			} catch (Exception e) {
-				System.out.println("SomethingWrongHappen");
+				System.out.println("Something went wrong while writing to file.");
+				e.printStackTrace();
 			}
 		}
 
@@ -80,7 +83,7 @@ import java.util.ArrayList;
 				}
 				readFile.close();
 			} catch (Exception e) {
-				System.out.println("Something WrongHappen");
+				System.out.println(e.getStackTrace());
 			}
 		}
 	}

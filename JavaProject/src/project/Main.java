@@ -41,7 +41,7 @@ public class Main {
                     System.out.println("Invalid choice. Please enter a number from 1 to 6.");
             }
         } while (choice != 6);
-        manager.writeToFile("Test");
+        // manager.writeToFile("Test");
         scanner.close();
     }
 
@@ -65,6 +65,7 @@ public class Main {
                     amount = scanner.nextDouble();
                     if (amount >= 0 && amount <= totalBalance) {
                         manager.addTransaction(new Transaction(type, amount));
+                        manager.writeToFile("Transaction");
                         break;
                     }
                     System.out.println("Amount cannot be negative or exceed the current balance. Please enter a valid amount.");
@@ -80,6 +81,7 @@ public class Main {
                     amount = scanner.nextDouble();
                     if (amount >= 0) {
                         manager.addTransaction(new Transaction(type, amount));
+                        manager.writeToFile("Transaction");
                         break;
                     }
                     System.out.println("Amount cannot be negative. Please enter a non-negative amount.");
