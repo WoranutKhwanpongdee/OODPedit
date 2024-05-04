@@ -37,6 +37,7 @@ public class Main {
                     break;
                 case 6:
                     System.out.println("Exiting...");
+                    break; // Added break statement here
                 default:
                     System.out.println("Invalid choice. Please enter a number from 1 to 6.");
             }
@@ -92,4 +93,4 @@ public class Main {
             }
         }
     }
-}    
+}

@@ -1,5 +1,4 @@
 package project;
-
-public interface Displayable {
-	public void display();
+public abstract class Displayable {
+    public abstract void display();
 }
